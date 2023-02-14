@@ -1,0 +1,595 @@
+:root {
+  --body-bg-color: #1e1e1e;
+  --text-color: #797979;
+  --bg-cards: #252525;
+  --bg-techs: #19fa6b;
+  --yellow: #e7de79;
+  --bg-cards-hover: #363636;
+  --bg-techs-hover: #09ad45;
+  --text-color-hover: #acacac;
+
+  --border-radius-cards: 10px;
+
+  --box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--body-bg-color); /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bg-cards-hover); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid var(--body-bg-color); /* creates padding around scroll thumb */
+}
+
+a:hover {
+  color: var(--text-color-hover);
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-size: 1.6rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+
+  font-family: 'DM Mono';
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 4rem;
+
+  max-width: 35.8rem;
+  width: 100%;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding-block: 3.2rem;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+  cursor: pointer;
+
+  transition: background 0.2s;
+}
+
+#profile:hover {
+  background: var(--bg-cards-hover);
+}
+
+#profile:hover .name,
+#profile:hover .subtitle {
+  color: var(--text-color-hover)
+}
+
+#profile img {
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+  border: 2px solid var(--bg-techs);
+}
+
+#profile .name {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 2.9rem;
+
+  color: var(--text-color);
+}
+
+#profile .subtitle {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+
+  color: var(--text-color);
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  gap: 1rem;
+
+  padding: 3rem 4rem;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#links a {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  color: var(--text-color);
+
+  text-decoration: none;
+
+  padding: .5rem;
+}
+
+#links a svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+#links a p {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+
+  display: flex;
+  align-items: center;
+}
+
+#links a:hover p {
+  color: var(--text-color-hover);
+  font-weight: 500;
+}
+
+#links a:hover svg path{
+  stroke: var(--text-color-hover);
+}
+
+#links a:hover {
+  background: var(--bg-cards-hover);
+  border-radius: 10px;
+}
+
+#tecnologies {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2rem;
+
+  padding: 3rem;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+}
+
+#tecnologies h1 {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: var(--text-color);
+}
+
+#tecnologies .techs {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+}
+
+#tecnologies .tecnologie {
+  padding: 0.6rem;
+
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  text-align: center;
+  
+
+  background: var(--bg-techs);
+  border-radius: 30px;
+
+  width: 8.5rem;
+
+  cursor: pointer;
+
+  transition: background 0.2s;
+}
+
+#tecnologies .tecnologie:hover {
+  background: var(--bg-techs-hover);
+}
+
+#experiences {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2rem;
+
+  padding: 3rem 4rem;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+}
+
+#experiences h1 {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: var(--text-color);
+}
+
+#experiences .histExperiences ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#experiences .histExperiences ul li {
+  margin-left: 4rem;
+
+  color: var(--text-color);
+}
+
+#experiences .histExperiences ul li .title {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+#experiences .histExperiences ul li .subtitle {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+#experiences .histExperiences ul li .sector {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2rem;
+
+  padding: 3rem 4rem;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+}
+
+#education h1 {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: var(--text-color);
+}
+
+#education .histEducation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#education .histEducation ul li {
+  margin-left: 4rem;
+
+  color: var(--text-color);
+}
+
+#education .histEducation ul li .title {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+#education .histEducation ul li .subtitle {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+#education .histEducation ul li .sector {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+main {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  margin-right: 4rem;
+
+  gap: 3rem;
+
+  max-width: 95.2rem;
+}
+
+main header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3rem;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+}
+
+main header h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: var(--text-color);
+}
+
+main header a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-decoration: none;
+
+  color: var(--text-color);
+}
+
+#myProjects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#myProjects .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  color: var(--text-color);
+}
+
+#myProjects .cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  padding: 3rem;
+
+  max-width: 46.1rem;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+}
+
+#myProjects .cards .card .title {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+
+#myProjects .cards .card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+#myProjects .cards .card .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#myProjects .cards .card .footer .actionButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+
+#myProjects .cards .card .footer .actionButtons .actionButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  text-align: center;
+  gap: 0.8rem;
+
+  cursor: pointer;
+}
+
+#myProjects .cards .card .footer .actionButtons .actionButton:hover p {
+  font-weight: 500;
+  color: var(--text-color-hover);
+}
+
+#myProjects .cards .card .footer .actionButtons .actionButton:hover svg path {
+  stroke: var(--text-color-hover);
+} 
+
+#myProjects .cards .card .footer .actionButtons .actionButton p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+#myProjects .cards .card .footer .mostTecnologieUsed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#myProjects .cards .card .footer .mostTecnologieUsed .status {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background-color: var(--yellow);
+
+  border-radius: 50%;
+}
+
+#recentPosts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#recentPosts .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+#recentPosts .cards a {
+  text-decoration: none;
+}
+
+#recentPosts .cards .card:hover {
+  background-color: var(--bg-cards-hover);
+}
+
+#recentPosts .cards .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 2rem;
+
+  padding: 3rem;
+
+  width: 100%;
+
+  background: var(--bg-cards);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-cards);
+
+  cursor: pointer;
+}
+
+#recentPosts .cards .card img {
+  width: 12.8rem;
+  height: 12.8rem;
+
+  border-radius: 50%;
+}
+
+#recentPosts .cards .card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+#recentPosts .cards .card .content .title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: var(--text-color);
+}
+
+#recentPosts .cards .card .content .timeSpend {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--text-color);
+}
+
+#recentPosts .cards .card .content .contentP {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--text-color);
+}
+
+#recentPosts .cards .card .content .footerLinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#recentPosts .cards .card .content .footerLinks a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#recentPosts .cards .card .content .footerLinks a:hover {
+  color: var(--text-color-hover);
+}
