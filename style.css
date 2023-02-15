@@ -79,16 +79,27 @@ aside {
   transition: background 0.2s;
 }
 
+#profile div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 2rem;
+}
+
 #profile:hover {
   background: var(--bg-cards-hover);
 }
 
 #profile:hover .name,
 #profile:hover .subtitle {
-  color: var(--text-color-hover)
+  color: var(--text-color-hover);
 }
 
-#profile img {
+#profile div img {
   width: 12.8rem;
   height: 12.8rem;
   border-radius: 50%;
@@ -112,6 +123,8 @@ aside {
   font-weight: 300;
   font-size: 1.3rem;
   line-height: 1.6rem;
+  align-items: center;
+  text-align: center;
 
   color: var(--text-color);
 }
@@ -146,7 +159,7 @@ aside {
 
   text-decoration: none;
 
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #links a svg {
@@ -170,7 +183,7 @@ aside {
   font-weight: 500;
 }
 
-#links a:hover svg path{
+#links a:hover svg path {
   stroke: var(--text-color-hover);
 }
 
@@ -220,7 +233,6 @@ aside {
   font-size: 1rem;
   line-height: 1.3rem;
   text-align: center;
-  
 
   background: var(--bg-techs);
   border-radius: 30px;
@@ -405,6 +417,11 @@ main header a {
   gap: 3rem;
 }
 
+#cardsMyProjects {
+  max-height: 52vh;
+  overflow-y: auto;
+}
+
 #myProjects .cards {
   display: flex;
   flex-direction: row;
@@ -412,6 +429,7 @@ main header a {
   flex-wrap: wrap;
   gap: 3rem;
 
+  
   color: var(--text-color);
 }
 
@@ -420,8 +438,13 @@ main header a {
   flex-direction: column;
   gap: 2.2rem;
   padding: 3rem;
-
-  max-width: 46.1rem;
+  
+  width: 100%;
+  max-width: 44.1rem;
+  min-height: 23rem;
+  
+  margin-bottom: .5rem;
+  margin-right: 1rem;
 
   background: var(--bg-cards);
   box-shadow: var(--box-shadow);
@@ -439,12 +462,15 @@ main header a {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
+  width: 100%;
+  height: 100%;
 }
 
 #myProjects .cards .card .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 #myProjects .cards .card .footer .actionButtons {
@@ -470,7 +496,7 @@ main header a {
 
 #myProjects .cards .card .footer .actionButtons .actionButton:hover svg path {
   stroke: var(--text-color-hover);
-} 
+}
 
 #myProjects .cards .card .footer .actionButtons .actionButton p {
   font-style: normal;
@@ -485,6 +511,21 @@ main header a {
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+
+  padding: .5rem;
+  border-radius: 10px;
+}
+#myProjects .cards .card .footer .mostTecnologieUsed a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#myProjects .cards .card .footer .mostTecnologieUsed:hover {
+  background-color: var(--bg-cards-hover);
+}
+
+#myProjects .cards .card .footer .mostTecnologieUsed:hover a {
+  color: var(--text-color-hover);
 }
 
 #myProjects .cards .card .footer .mostTecnologieUsed .status {

@@ -16,7 +16,7 @@ function getAPIGitHub() {
         let div = document.createElement('div')
 
         div.innerHTML = `
-        <div class="card">
+        
           <div class="title">
             <img src="./assets/icons/folder.svg" alt="" />
             <h3>${item.name}</h3>
@@ -94,10 +94,10 @@ function getAPIGitHub() {
               </a>
             </div>
           </div>  
-      </div>
+      
         `
 
-        divCards.appendChild(div)
+        divCards.appendChild(div).classList.add('card')
 
       })
 
